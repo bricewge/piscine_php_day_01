@@ -11,5 +11,7 @@ if ($argc > 1) {
         }
     }
 }
+if ($dict[$value] !== NULL)
     echo $dict[$value]."\n";
+
 ?>
