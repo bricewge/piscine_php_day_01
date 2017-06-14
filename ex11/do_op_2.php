@@ -23,6 +23,10 @@ else {
         elseif (($str[$i] == '-' or $str[$i] == '+')
                 and $nb2 == NULL and $op != NULL)
             $nb2 = $str[$i];
+        elseif ($str[$i] == " " and
+                (($op === NULL and $nb1 !== NULL)
+                 or ($op !== NULL and $nb2 !== NULL)))
+            exit("Syntax Error\n");
         elseif ($str[$i] == " ")
             continue;
         else
