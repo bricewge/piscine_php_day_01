@@ -11,12 +11,13 @@ while (42) {
     $input = trim($input);
 
     if (is_numeric($input)) {
-        $number = intval($input);
+        $number = substr($input, -1);
+        $number = intval($number);
         if ($number % 2 == 0) {
-            echo "The number $number is even\n";
+            echo "The number $input is even\n";
         }
         else {
-            echo "The number $number is odd\n";
+            echo "The number $input is odd\n";
         }
     }
     else
