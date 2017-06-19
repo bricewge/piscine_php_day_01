@@ -25,7 +25,7 @@ foreach($argv as $i => $arg) {
         }
     }
 }
-sort($result);
+sort($result, SORT_STRING);
 foreach($result as $word)
     echo $word."\n";
 ?>
